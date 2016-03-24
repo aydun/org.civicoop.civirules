@@ -59,7 +59,10 @@ VALUES
   ('deleted_membership', 'Membership is deleted', 'Membership', 'delete', null, CURDATE(), 1),
   ('new_membership_payment', 'Membership Payment is added', 'MembershipPayment', 'create', null,  CURDATE(), 1),
   ('changed_membership_payment', 'Membership Payment is changed', 'MembershipPayment', 'edit', null, CURDATE(), 1),
-  ('deleted_membership_payment', 'Membership Payment is deleted', 'MembershipPayment', 'delete', null, CURDATE(), 1);
+  ('deleted_membership_payment', 'Membership Payment is deleted', 'MembershipPayment', 'delete', null, CURDATE(), 1),
+  ('new_lineitem', 'Line Item is added', 'LineItem', 'create', 'CRM_CivirulesPostTrigger_LineItem', CURDATE(), 1),
+  ('changed_lineitem', 'Line Item is changed', 'LineItem', 'edit', 'CRM_CivirulesPostTrigger_LineItem', CURDATE(), 1),
+  ('deleted_lineitem', 'Line Item is deleted', 'LineItem', 'delete', 'CRM_CivirulesPostTrigger_LineItem', CURDATE(), 1);
 
 INSERT INTO civirule_trigger (name, label, object_name, op, class_name, created_date, created_user_id)
 VALUES

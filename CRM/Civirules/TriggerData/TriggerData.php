@@ -101,6 +101,12 @@ abstract class CRM_Civirules_TriggerData_TriggerData {
     return array();
   }
 
+  public function getAllEntityData() {
+    $data = $this->entity_data;
+    $data['contact'] = $this->getEntityData('contact');
+    return $data;
+  }
+
   /**
    * Sets data for an entity
    *
